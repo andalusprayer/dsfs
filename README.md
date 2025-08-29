@@ -1,62 +1,121 @@
-# Astro Starter Kit: Blog
+# 🍅 番茄计时器 (Pomodoro Timer)
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+一个功能丰富的安卓番茄工作法计时器应用，帮助用户提高专注力和工作效率。
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## ✨ 核心功能
 
-<!-- dash-content-start -->
+### 🧭 计时功能
+- **专注时段 (Focus Session)**: 25分钟专注工作
+- **休息时间 (Break Time)**: 5分钟短休息
+- **长休息 (Long Break)**: 15分钟长休息
+- **计时控制**: 开始、暂停、重置
+- **自动切换**: 专注完成后自动进入休息阶段
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+### 📊 统计与成就
+- **番茄数统计**: 记录每日完成的专注次数
+- **时间统计**: 累计专注时间
+- **连胜系统**: 连续专注天数记录
+- **成就徽章**: 解锁不同等级的成就称号
 
-Features:
+### 🎮 游戏化元素
+- **连胜状态**: 显示当前连胜次数和状态
+- **成就称号**: 从"专注新星"到"专注狂人"
+- **激励提示**: 根据表现显示不同的鼓励话语
+- **进度可视化**: 圆形进度条显示剩余时间
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## 🎯 用户体验特色
 
-<!-- dash-content-end -->
+- **高效设计**: 简洁直观的界面设计
+- **节奏感**: 科学的专注-休息循环
+- **习惯养成**: 通过连胜系统培养专注习惯
+- **时间感知**: 清晰的时间显示和进度反馈
+- **沉浸模式**: 专注时减少干扰
+- **智能提醒**: 完成通知和震动提醒
 
-## Getting Started
+## 🏆 成就系统
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+### 连胜称号
+- **专注新星** (1-4次): 开始专注之旅
+- **时间猎人** (5-9次): 掌握时间管理
+- **番茄大师** (10-19次): 专注力专家
+- **节奏之神** (20-29次): 完美节奏掌控
+- **战绩传奇** (30-49次): 专注力传奇
+- **专注狂人** (50+次): 无人能敌的专注力
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
-```
+### 状态氛围
+- **专注连击**: 连续专注状态
+- **热血专注中**: 5次以上连胜
+- **无人能挡**: 10次以上连胜
+- **节奏爆发**: 15次以上连胜
+- **专注暴走**: 20次以上连胜
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+## 🔧 技术特性
 
-## 🚀 Project Structure
+- **架构模式**: MVVM + Repository
+- **数据存储**: SharedPreferences + Room数据库
+- **后台服务**: 前台服务确保计时准确性
+- **通知系统**: 智能通知管理
+- **权限管理**: 通知和震动权限处理
+- **主题支持**: 明暗主题切换
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📱 界面设计
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Material Design 3**: 现代化的设计语言
+- **响应式布局**: 适配不同屏幕尺寸
+- **卡片式设计**: 清晰的信息分组
+- **色彩系统**: 番茄红主题色系
+- **图标设计**: 简洁明了的矢量图标
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+## 🚀 使用方法
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. **开始专注**: 点击"开始计时"按钮
+2. **专注进行**: 25分钟专注工作，避免干扰
+3. **休息放松**: 专注完成后自动进入休息时间
+4. **查看统计**: 在底部导航查看今日战绩
+5. **解锁成就**: 持续专注解锁更多成就
 
-## 🧞 Commands
+## 📋 系统要求
 
-All commands are run from the root of the project, from a terminal:
+- **最低版本**: Android 6.0 (API 24)
+- **目标版本**: Android 14 (API 34)
+- **权限要求**: 通知权限、震动权限
 
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
+## 🛠️ 开发环境
 
-## 👀 Want to learn more?
+- **开发语言**: Kotlin
+- **构建工具**: Gradle
+- **最低SDK**: 24
+- **目标SDK**: 34
+- **编译SDK**: 34
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📦 依赖库
 
-## Credit
+- **AndroidX**: 核心Android库
+- **Material Design**: 材料设计组件
+- **Lifecycle**: 生命周期管理
+- **Room**: 本地数据库
+- **WorkManager**: 后台任务管理
+- **Lottie**: 动画支持
+- **MPAndroidChart**: 图表显示
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## 🔮 未来计划
+
+- [ ] 数据同步与云端备份
+- [ ] 团队协作功能
+- [ ] 自定义主题和皮肤
+- [ ] 数据导出功能
+- [ ] 多语言支持
+- [ ] 智能提醒算法
+- [ ] 专注力分析报告
+
+## 📄 许可证
+
+本项目采用 MIT 许可证，详见 [LICENSE](LICENSE) 文件。
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request 来帮助改进这个项目！
+
+---
+
+**让每一次专注都有意义，让每一分钟都充满价值！** 🚀
